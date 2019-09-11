@@ -1,0 +1,7 @@
+name = "mutheme"
+description = "A minimal Hugo theme using a custom bootstrap"
+tags = ["blog"]
+min_version = 0.53
+
+[author]
+    name = "Santosh Heigrujam"

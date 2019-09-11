@@ -1,0 +1,22 @@
+{{ partial "head.html" . }}
+  <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+    <div class="container">
+      <div class="header">
+        <a href="{{ .Site.BaseURL }}"><h3>{{ .Site.Title }}</h3></a>
+        <em>
+          <p class="blog-description">
+            {{ with .Site.Params.description }} {{.}} {{end}}
+          </p>
+        </em>        
+        <span style="height:2rem; width:2rem; background-color:blue; border-radius:50%; display:inline-block;"></span>
+        <span style="height:2rem; width:2rem; background-color:maroon; border-radius:50%; display:inline-block;"></span>
+        <span style="height:2rem; width:2rem; background-color:red; border-radius:50%; display:inline-block;"></span>
+      </div>
+
+      <main>
+        {{ block "main" . -}}{{- end }}
+      </main>
+    </div>
+  </body>
+
+</html>
