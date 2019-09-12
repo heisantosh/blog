@@ -1,4 +1,4 @@
-baseURL = "http://heisantosh.github.io/"
+baseURL = "https://heisantosh.github.io/"
 languageCode = "en-us"
 title = "Delay Line Memory"
 theme = "mu"

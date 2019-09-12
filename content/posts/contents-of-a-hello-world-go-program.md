@@ -1,7 +1,7 @@
 ---
 title: "Contents of a Hello world Go program"
 date: 2019-09-10T09:49:15+05:30
-draft: true
+draft: false
 ---
 
 A hello world in program in Go is 7 lines long. Any text editor which supports UTF-8 can be used to write a Go program. Then we can compile and run it. Here we explore the contents of a "Hello world." from its creation to its execution.
@@ -148,7 +148,7 @@ Rebuilding with this flag we can see that size of the binary has reduce by about
 
 {{<highlight bash>}}
 $ go build -ldflags=-w 
-santosh@ideapad:~/Devel/hello$ ll
+$ ll
 total 1548
 drwxr-xr-x  2 santosh santosh    4096 Sep 11 09:58 ./
 drwxr-xr-x 19 santosh santosh    4096 Sep 10 10:19 ../
