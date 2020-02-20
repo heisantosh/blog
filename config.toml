@@ -5,4 +5,11 @@ theme = "mu"
 pygmentsUseClasses=true
 
 [params]
-    description = "Notes by Santosh Heigrujam @heisantosh "
+    description = "Notes by Santosh Heigrujam"
+    themeColor = "theme-base-0e"
+
+[Menus]
+  main = [
+      {Name = "Github", URL = "https://github.com/heisantosh/"},
+      {Name = "Twitter", URL = "https://www.twitter.com/heisantosh/"}
+  ]
