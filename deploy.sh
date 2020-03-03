@@ -6,7 +6,7 @@ set -e
 printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
 # Build the project.
-hugo -t mu -d heisantosh.github.io
+hugo -t noteworthy -d heisantosh.github.io
 
 # Go To Public folder
 cd heisantosh.github.io
