@@ -1,15 +1,43 @@
 baseURL = "https://heisantosh.github.io/"
 languageCode = "en-us"
 title = "Delay Line Memory"
-theme = "mu"
+theme = "noteworthy"
 pygmentsUseClasses=true
 
-[params]
-    description = "Notes by Santosh Heigrujam"
-    themeColor = "theme-base-0e"
+paginate = 4 # Set the number of posts to show before overflowing to the next page.
+# summaryLength = 100 # Configure how long the post summary should be on the homepage.
 
-[Menus]
-  main = [
-      {Name = "Github", URL = "https://github.com/heisantosh/"},
-      {Name = "Twitter", URL = "https://www.twitter.com/heisantosh/"}
-  ]
+[taxonomies]
+  tag = "tags"
+
+[author]
+	name = "heisantosh"
+    
+[markup.goldmark.renderer]
+    unsafe = true
+
+[params]
+    math = true
+
+    description = "Notes by Santosh Heigrujam"
+
+    github = "https://github.com/heisantosh"
+    twitter = "https://twitter.com/heisantosh"
+
+[[menu.main]]
+	identifier = "about"
+	name = "About"
+	url = "/about/"
+	weight = 1
+
+[[menu.main]]
+	identifier = "tags"
+	name = "Tags"
+	url = "/tags/"
+	weight = 2
+
+[[menu.main]]
+	name = "Archives"
+	identifier = "archives"
+	url = "/archives/"
+	weight = 3
