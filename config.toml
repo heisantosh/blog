@@ -23,6 +23,7 @@ paginate = 4 # Set the number of posts to show before overflowing to the next pa
 
     github = "https://github.com/heisantosh"
     twitter = "https://twitter.com/heisantosh"
+	email = "santosh.hei@gmail.com"
 
 [[menu.main]]
 	identifier = "about"
