@@ -1,4 +1,4 @@
-name: hugo publish
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,28 +6,14 @@ on:
     - master
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-18.04
+  hugo-deploy-gh-pages:
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-      # with:
-      #   submodules: true
-
-    - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
-      with:
-        hugo-version: '0.59.1'
-
-    - name: Build
-      run: hugo --minify
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2
+    - uses: actions/checkout@master
+    - name: hugo-deploy-gh-pages
+      uses: heisantosh/blog@master
       env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.BLOG_DEPLOY_KEY }}
-        EXTERNAL_REPOSITORY: heisantosh/heisantosh.github.io
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: ./public
-      with:
-        emptyCommits: false
-        commitMessage: ${{ github.event.head_commit.message }}
+        GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
+        HUGO_VERSION: "0.53"
+        WEBSITE_GIT: "git@github.com:heisantosh/heisantosh.github.io.git"
+        WEBSITE_DIR: "heisantosh.github.io"
