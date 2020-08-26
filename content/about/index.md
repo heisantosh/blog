@@ -4,7 +4,7 @@ date:
 draft: false
 ---
 
-🧮 ⚽ 🧭
+🧮 🧭 ⚽
 
 Hi! My name is Santosh Heigrujam. I'm a software engineer.
 
@@ -19,7 +19,7 @@ Hi! My name is Santosh Heigrujam. I'm a software engineer.
 * Revisionist History
 
 🎮 Some of the games I'm interested in:
-* No Man's Sky 🛩️🪐
+* No Man's Sky 🛸🪐
 * Genshin Impact 🎐🍀
 * War Robots 🤖
 * Biomutant 🦝
