@@ -8,20 +8,22 @@ draft: false
 
 Hi! My name is Santosh Heigrujam. I'm a software engineer.
 
-
 🐱 github: [https://github.com/heisantosh](https://github.com/heisantosh)<br>
 🦉 twitter: [https://twitter.com/heisantosh](https://twitter.com/heisantosh)
 
-![Delay Line Memory](https://lh3.googleusercontent.com/proxy/PMxzdVD8RemmqQCPEN4FudoGdZxjF6a2o0jbEcMF_P7u_qJwhZ796kdbQXXgj1vZ3KsTDXVcSh2cevxXqljWawFUesWkgv5Qs6Y "Delay Line Memory")
-
-Some of my favorite podcasts are:
+📻 Some of my favorite podcasts:
 * Go Time
 * Ghibliotheque
 * On the Metal
 * Software Engineering Daily
 * Revisionist History
 
-Some of my favorite games are:
-* No Man's Sky 🛸
-* Genshin Impact 🎐
+🎮 Some of the games I'm interested in:
+* No Man's Sky 🛩️🪐
+* Genshin Impact 🎐🍀
 * War Robots 🤖
+* Biomutant 🦝
+* Stray 🐈
+* Cyberpunk 2077 🌆 
+
+<img style="margin-top:4em" src="https://spectrum.ieee.org/image/29923" class="img-rounded"/>
