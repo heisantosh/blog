@@ -1,14 +1,14 @@
 ---
 title: "lei - a Go installer"
 date: 2020-08-25T17:01:58+05:30
-draft: true
+draft: false
 ---
 
 A CLI tool to help install Go, written in Go!
 or that's what I wanted to create!
 
 ><b>lexicon</b><br>
-<i>word: lei, language:</em> Manipuri,<button style="border:none; color:inherit; background:inherit;" onclick="alert('hello there!');">🔉</button>noun 1. flower</i>
+<i>word: lei, language:</em> Manipuri, noun 1. flower</i>
 
 Whenever a new version of Go is released I have to download the tarball, extract it and replace the current installation. Usually I typed some commands in the command line to accomplish the task. I could use a shell script to accomplish it. There are already some tools which can install Go and even manage different versions and installations.
 * [gvm](https://github.com/moovweb/gvm) - similar to nvm
