@@ -1,39 +1,29 @@
-baseURL = "http://heisantosh.github.io/"
-languageCode = "en-us"
-title = "Delay Line Memory"
-theme = "etch"
+baseURL = 'https://heisantosh.github.io/'
+languageCode = 'en-us'
+title = '🍉 Delay Line Memory'
+theme = 'me'
+paginate = 10
 
-enableInlineShortcodes = true
-pygmentsCodeFences = true
-pygmentsUseClasses = true
-
-[params]
-  description = "Your site description"
-  copyright = ""
-  dark = "auto"
-  highlight = true
-
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "posts"
-    title = "posts"
-    url = "/"
-    weight = 10
-
-  [[menu.main]]
-    identifier = "about"
-    name = "about"
-    title = "about"
-    url = "/about/"
-    weight = 20
+[author]
+    name = 'Santosh Heigrujam'
+    email = 'santosh.hei@gmail.com'
 
 [permalinks]
-  posts = "posts/:title/"
+    post = '/blog/:year/:month/:day/:title/'
 
-[markup.goldmark.renderer]
-  # Allow HTML in Markdown
-  unsafe = true
+[params]
+    description = 'On Life, Software & the Universe'
+    home = 'Blog'
 
-  [markup.tableOfContents]
-    ordered = true
+    # Socials
+    github = 'heisantosh'
+    twitter = 'heisantosh'
+    linkedin = 'santosh-heigrujam'
+
+pygmentsuseclasses = true
+pygmentscodefences = true
+
+[markup]
+    [goldmark]
+        [renderer]
+            unsafe = true

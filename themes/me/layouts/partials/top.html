@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ if hasPrefix .URL "/de" }}de{{ else }}en{{ end }}">
+{{ partial "head.html" . }}
+<body>
+  <header>
+    <a href="{{ .Site.BaseURL }}" class="alternate">
+      <h1>{{ .Site.Title }}</h1>
+    </a>
+    <div class="social">
+      <a href="{{ "about/" | relURL }}">About</a>
+      <a href="https://github.com/{{ .Site.Params.github }}">Github</a>
+      <a href="https://twitter.com/{{ .Site.Params.twitter }}">Twitter</a>
+      <a href="{{ "reads/" | relURL }}">Reads</a>
+      <a type="application/rss+xml" href="{{ "index.xml" | relURL }}">RSS</a>
+    </div>
+  </header>
