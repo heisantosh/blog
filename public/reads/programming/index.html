@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+
+  <title>Programming &#8211; 🍉 Delay Line Memory</title>
+
+  
+  <meta name="description" content="Insightful articles and examples to help you become a better software developer">
+  
+  <meta name="author" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="🍉 Delay Line Memory" />
+
+  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+  <link href="/css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="http://localhost:1313/" class="alternate">
+      <h1>🍉 Delay Line Memory</h1>
+    </a>
+    <div class="social">
+      <a href="/about/">About</a>
+      <a href="https://github.com/heisantosh">Github</a>
+      <a href="https://x.com/heisantosh">X</a>
+      <a href="/reads/">Reads</a>
+      <a type="application/rss+xml" href="/index.xml">RSS</a>
+    </div>
+  </header>
+
+
+<div class="post-header">
+  <h2>Programming</h2>
+</div>
+
+<article class="post-content">
+  <p><p>Insightful articles and examples to help you become a better software developer</p>
+</p>
+
+  <ul class="hide-list">
+  
+    <li>
+      <a href="https://medium.com/@herbcaudill/lessons-from-6-software-rewrite-stories-635e4c8f7c22">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Lessons from 6 software rewrite stories
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.jakubholy.net/2021/specific-vs-general-cryogen/">
+        <img src="https://www.google.com/s2/favicons?domain=blog.jakubholy.net">
+        Specific vs. general: Which is better?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://surfingcomplexity.blog/2021/05/29/why-do-config-changes-keep-coming-up-in-major-incidents/">
+        <img src="https://www.google.com/s2/favicons?domain=surfingcomplexity.blog">
+        Why do config changes keep coming up in major incidents?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://increment.com/testing/i-test-in-production/">
+        <img src="https://www.google.com/s2/favicons?domain=increment.com">
+        I test in prod
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://rachelbythebay.com/w/2020/09/02/check/">
+        <img src="https://www.google.com/s2/favicons?domain=rachelbythebay.com">
+        What is your take on checking return values?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://programmingisterrible.com/post/176657481103/repeat-yourself-do-more-than-one-thing-and">
+        <img src="https://www.google.com/s2/favicons?domain=programmingisterrible.com">
+        Repeat yourself, do more than one thing, and rewrite everything
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://programmingisterrible.com/post/188942142748/scaling-in-the-presence-of-errorsdont-ignore">
+        <img src="https://www.google.com/s2/favicons?domain=programmingisterrible.com">
+        Scaling in the presence of errors—don’t ignore them
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://programmingisterrible.com/post/139222674273/write-code-that-is-easy-to-delete-not-easy-to">
+        <img src="https://www.google.com/s2/favicons?domain=programmingisterrible.com">
+        Write code that is easy to delete, not easy to extend.
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://increment.com/software-architecture/primer-on-functional-architecture/">
+        <img src="https://www.google.com/s2/favicons?domain=increment.com">
+        A primer on functional architecture
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.infoq.com/presentations/Value-Values/">
+        <img src="https://www.google.com/s2/favicons?domain=www.infoq.com">
+        The Value of Values
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://increment.com/software-architecture/in-space-no-one-can-hear-you-kernel-panic/">
+        <img src="https://www.google.com/s2/favicons?domain=increment.com">
+        In space, no one can hear you kernel panic
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.colinbreck.com/observations-on-observability/">
+        <img src="https://www.google.com/s2/favicons?domain=blog.colinbreck.com">
+        Observations on Observability
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://eng.fitbit.com/the-passport-a-tool-for-better-metrics/">
+        <img src="https://www.google.com/s2/favicons?domain=eng.fitbit.com">
+        The Passport: A Tool for Better Metrics
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@rplevy/cybernetics-versus-informatics-understanding-the-type-wars-99878fe956d6">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Cybernetics Versus Informatics: Understanding the Type Wars
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.facebook.com/notes/kent-beck/taming-complexity-with-reversibility/1000330413333156/">
+        <img src="https://www.google.com/s2/favicons?domain=www.facebook.com">
+        Taming Complexity with Reversibility
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@bellmar/sre-as-a-lifestyle-choice-de9f5a82d73d">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        SRE as a Lifestyle Choice
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.drmaciver.com/2013/04/a-freemium-model-for-scheduling/">
+        <img src="https://www.google.com/s2/favicons?domain=www.drmaciver.com">
+        A freemium model for scheduling
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=zi0rHwfiX1Q&amp;list=WL&amp;index=68">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        John Hughes - Testing the Hard Stuff and Staying Sane
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.jooq.org/2016/07/05/say-no-to-venn-diagrams-when-explaining-joins/">
+        <img src="https://www.google.com/s2/favicons?domain=blog.jooq.org">
+        Say NO to Venn Diagrams When Explaining JOINs
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/darklang/how-dark-deploys-code-in-50ms-771c6dd60671">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        How Dark deploys code in 50ms
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.hillelwayne.com/post/stamping-on-eventstream/">
+        <img src="https://www.google.com/s2/favicons?domain=www.hillelwayne.com">
+        STAMPing on event-stream
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://juxt.pro/blog/posts/waste.html">
+        <img src="https://www.google.com/s2/favicons?domain=juxt.pro">
+        Waste – An ever evolving struggle against waste
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.destroyallsoftware.com/talks/boundaries">
+        <img src="https://www.google.com/s2/favicons?domain=www.destroyallsoftware.com">
+        Boundaries
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://ferd.ca/lessons-learned-while-working-on-large-scale-server-software.html">
+        <img src="https://www.google.com/s2/favicons?domain=ferd.ca">
+        Lessons Learned while Working on Large-Scale Server Software
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://ferd.ca/property-based-testing-basics.html">
+        <img src="https://www.google.com/s2/favicons?domain=ferd.ca">
+        Property-Based Testing Basics
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.hillelwayne.com/post/metamorphic-testing/">
+        <img src="https://www.google.com/s2/favicons?domain=www.hillelwayne.com">
+        Metamorphic Testing
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.michaelnygard.com/blog/2015/08/microservices-versus-lean/">
+        <img src="https://www.google.com/s2/favicons?domain=www.michaelnygard.com">
+        Microservices versus Lean
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.samstokes.co.uk/blog/2014/05/01/what-programming-is-like/">
+        <img src="https://www.google.com/s2/favicons?domain=blog.samstokes.co.uk">
+        What programming is like
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://research.swtch.com/deps">
+        <img src="https://www.google.com/s2/favicons?domain=research.swtch.com">
+        Our Software Dependency Problem - Russ Cox
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.michaelnygard.com/blog/2015/04/the-perils-of-semantic-coupling/">
+        <img src="https://www.google.com/s2/favicons?domain=www.michaelnygard.com">
+        The Perils of Semantic Coupling
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.michaelnygard.com/blog/2015/06/faceted-identities/">
+        <img src="https://www.google.com/s2/favicons?domain=www.michaelnygard.com">
+        Faceted Identities
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.michaelnygard.com/blog/2017/06/spectrum-of-change/">
+        <img src="https://www.google.com/s2/favicons?domain=www.michaelnygard.com">
+        Spectrum of Change
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.michaelnygard.com/blog/2015/10/give-them-the-button/">
+        <img src="https://www.google.com/s2/favicons?domain=www.michaelnygard.com">
+        Give Them The Button!
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.michaelnygard.com/blog/2016/03/some-useful-techniques-from-bygone-eras/">
+        <img src="https://www.google.com/s2/favicons?domain=www.michaelnygard.com">
+        Some Useful Techniques From Bygone Eras
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://ferd.ca/operable-software.html">
+        <img src="https://www.google.com/s2/favicons?domain=ferd.ca">
+        Operable Software
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=IV2bQO9TfTk">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Stability Patterns and Antipatterns, Michael Nygard
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=xxW_c_8AHiE">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Michael Nygard - Grinding the Monolith
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.michaelnygard.com/blog/2015/06/components-and-glue/">
+        <img src="https://www.google.com/s2/favicons?domain=www.michaelnygard.com">
+        Components and Glue
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.michaelnygard.com/blog/2015/07/the-fear-cycle/">
+        <img src="https://www.google.com/s2/favicons?domain=www.michaelnygard.com">
+        The Fear Cycle
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=LEZv-kQUSi4">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Stuart Halloway - Narcissistic Design
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.infoq.com/presentations/Architecture-Without-an-End-State">
+        <img src="https://www.google.com/s2/favicons?domain=www.infoq.com">
+        Architecture Without an End State • Michael Nygard
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=esm-1QXtA2Q">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Uncoupling • Michael Nygard
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.confluent.io/blog/turning-the-database-inside-out-with-apache-samza/">
+        <img src="https://www.google.com/s2/favicons?domain=www.confluent.io">
+        Turning the database inside-out with Apache Samza
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://kevinlynagh.com/stop-slacking/">
+        <img src="https://www.google.com/s2/favicons?domain=kevinlynagh.com">
+        Designing an email-only Slack interface
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://hackernoon.com/education-of-a-programmer-aaecf2d35312">
+        <img src="https://www.google.com/s2/favicons?domain=hackernoon.com">
+        Education of a Programmer
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.nytimes.com/2018/12/17/science/donald-knuth-computers-algorithms-programming.html">
+        <img src="https://www.google.com/s2/favicons?domain=www.nytimes.com">
+        The Yoda of Silicon Valley
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=UJnsXUVsr7w">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Keep Ruby Weird 2018 - Closing Keynote by Avdi Grimm
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=YR5WdGrpoug">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Maybe Not - Rich Hickey
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://nickcraver.com/blog/2018/11/29/stack-overflow-how-we-do-monitoring/">
+        <img src="https://www.google.com/s2/favicons?domain=nickcraver.com">
+        Stack Overflow: How We Do Monitoring - 2018 Edition
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://writings.quilt.org/2014/05/12/distributed-systems-and-the-end-of-the-api/">
+        <img src="https://www.google.com/s2/favicons?domain=writings.quilt.org">
+        Distributed Systems and the End of the API
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://increment.com/security/design-for-security/">
+        <img src="https://www.google.com/s2/favicons?domain=increment.com">
+        Design for security
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://increment.com/documentation/post-mortems-to-the-rescue/">
+        <img src="https://www.google.com/s2/favicons?domain=increment.com">
+        Post-mortems to the rescue
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=MwnVwqt0UwE">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Lone Star RubyConf 2009 - Something Interesting by Dave Thomas
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.silasreinagel.com/blog/2018/10/30/indirection-is-not-abstraction/">
+        <img src="https://www.google.com/s2/favicons?domain=www.silasreinagel.com">
+        Indirection Is Not Abstraction
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://www.rntz.net/post/against-software-development.html">
+        <img src="https://www.google.com/s2/favicons?domain=www.rntz.net">
+        Against software development
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.usejournal.com/lean-testing-or-why-unit-tests-are-worse-than-you-think-b6500139a009">
+        <img src="https://www.google.com/s2/favicons?domain=blog.usejournal.com">
+        Lean Testing or Why Unit Tests are Worse than You Think
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=aGJTXdXQN2o">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Open Source Language Design in Rust and Node.js by Ashley Williams
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=CdL4tyicXT4">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Sam Aaron - Communicative Programming
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.facebook.com/atscaleevents/videos/2131701657102927/">
+        <img src="https://www.google.com/s2/favicons?domain=www.facebook.com">
+        Systems at Scale 2018 – Rebuilding the Inbox: The Corporate and Cultural Adventures of Modernizing Yahoo Mail
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions">
+        <img src="https://www.google.com/s2/favicons?domain=thinkrelevance.com">
+        Documenting Architecture Decisions
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://hintjens.com/blog:74">
+        <img src="https://www.google.com/s2/favicons?domain=hintjens.com">
+        The Power of Living Systems
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=fThhbt23SGM">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Mike Bostock - Design is a Search Problem
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://bigmedium.com/ideas/only-one-deliverable-matters.html">
+        <img src="https://www.google.com/s2/favicons?domain=bigmedium.com">
+        Only One Deliverable Matters
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://antirez.com/news/124">
+        <img src="https://www.google.com/s2/favicons?domain=antirez.com">
+        Writing system software: code comments.
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://stuartsierra.com/2016/07/18/apathy-of-the-commons">
+        <img src="https://www.google.com/s2/favicons?domain=stuartsierra.com">
+        Apathy of the Commons
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=f84n5oFoZBc">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Hammock Driven Development - Rich Hickey
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://russolsen.com/articles/2017/06/30/team-agile.html">
+        <img src="https://www.google.com/s2/favicons?domain=russolsen.com">
+        Building a team: Agile!
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://hintjens.com/blog:23">
+        <img src="https://www.google.com/s2/favicons?domain=hintjens.com">
+        Good, Cheap, and Fast - PC3
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://rakhim.org/2018/07/software-shouldnt-fail/">
+        <img src="https://www.google.com/s2/favicons?domain=rakhim.org">
+        We shouldn&#39;t let people get used to the idea that software fails
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=AnZ0uTOerUI">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Unconditional Code - Michael Feathers
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://bradfieldcs.com/knives/">
+        <img src="https://www.google.com/s2/favicons?domain=bradfieldcs.com">
+        Cutting through to what matters
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://charity.wtf/2018/08/17/on-engineers-and-influence/">
+        <img src="https://www.google.com/s2/favicons?domain=charity.wtf">
+        On Engineers and Influence
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.jessitron.com/2014/08/the-power-of-embedded-developers.html">
+        <img src="https://www.google.com/s2/favicons?domain=blog.jessitron.com">
+        The power of embedded developers
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.microsoft.com/en-us/research/blog/exploding-software-engineering-myths/">
+        <img src="https://www.google.com/s2/favicons?domain=www.microsoft.com">
+        Exploding Software-Engineering Myths
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://peter.bourgon.org/observability-the-hard-parts/">
+        <img src="https://www.google.com/s2/favicons?domain=peter.bourgon.org">
+        Observability: the hard parts
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2018/06/19/what-i-use-wireshark-for/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        How I use Wireshark
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://zachholman.com/talk/utc-is-enough-for-everyone-right">
+        <img src="https://www.google.com/s2/favicons?domain=zachholman.com">
+        UTC is Enough for Everyone, Right?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://staltz.com/open-source-without-maintainers.html">
+        <img src="https://www.google.com/s2/favicons?domain=staltz.com">
+        André Staltz - Open source without maintainers
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=hZ3gmh-d9oI">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Ted Nelson -- Computers for Cynics
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=a-BOSpxYJ9M">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Agile is Dead • Pragmatic Dave Thomas
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=Foi54om6oGQ">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Past , Present and Future of JSON API
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@colin.hicks/what-keeps-apache-kafka-from-eating-the-world-ea1caeef99e4">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        What keeps Apache Kafka from eating the world?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://monkey.org/~marius/unix-tools-hints.html">
+        <img src="https://www.google.com/s2/favicons?domain=monkey.org">
+        Hints for writing Unix tools
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf">
+        <img src="https://www.google.com/s2/favicons?domain=web.mit.edu">
+        END-TO-END ARGUMENTS IN SYSTEM DESIGN
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.nelhage.com/post/end-to-end-principle/">
+        <img src="https://www.google.com/s2/favicons?domain=blog.nelhage.com">
+        Two Perspectives on the End-to-End Principle
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/">
+        <img src="https://www.google.com/s2/favicons?domain=www.joelonsoftware.com">
+        The Law of Leaky Abstractions
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=-I_jE0l7sYQ">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Joe Armstrong - The Forgotten Ideas in Computer Science
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=U__pZ2a2mT0">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Baron Schwartz - Business Observability Matters Too
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://speakerdeck.com/copyconstructor/prometheus-a-whirlwind-tour">
+        <img src="https://www.google.com/s2/favicons?domain=speakerdeck.com">
+        Prometheus - A Whirlwind Tour by Cindy Sridharan
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=ed7A7r6DBsM">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        The How and Why of Fitting Things Together - Joe Armstrong
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://tomasz.janczuk.org/2015/09/from-kafka-to-zeromq-for-log-aggregation.html">
+        <img src="https://www.google.com/s2/favicons?domain=tomasz.janczuk.org">
+        From Kafka to ZeroMQ for real-time log aggregation
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=SWTWkYbcWU0">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Type Systems - The Good, Bad and Ugly by Paul Snively and Amanda Laucher
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=gY0H0KVc_h0">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Nathan Sorenson - Domain Specific Type Systems
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://rachelbythebay.com/w/2018/03/23/ducttape/">
+        <img src="https://www.google.com/s2/favicons?domain=rachelbythebay.com">
+        Look for the duct tape
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://vvvvalvalval.github.io/posts/what-makes-a-good-repl.html">
+        <img src="https://www.google.com/s2/favicons?domain=vvvvalvalval.github.io">
+        What makes a good REPL?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://gist.github.com/rondy/af1dee1d28c02e9a225ae55da2674a6f">
+        <img src="https://www.google.com/s2/favicons?domain=gist.github.com">
+        Effective Engineer - Notes
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=SM2uXpmyJmA">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Antics, drift, and chaos by Lorin Hochstein
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://prog21.dadgum.com/177.html">
+        <img src="https://www.google.com/s2/favicons?domain=prog21.dadgum.com">
+        Organizational Skills Beat Algorithmic Wizardry
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.b-list.org/weblog/2018/feb/11/usernames/">
+        <img src="https://www.google.com/s2/favicons?domain=www.b-list.org">
+        Let’s talk about usernames
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://hackernoon.com/what-i-learnt-from-building-3-high-traffic-web-applications-on-an-embedded-key-value-store-68d47249774f">
+        <img src="https://www.google.com/s2/favicons?domain=hackernoon.com">
+        What I learnt from building 3 high traffic web applications on an embedded key value store.
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.hillelwayne.com/post/contracts/">
+        <img src="https://www.google.com/s2/favicons?domain=www.hillelwayne.com">
+        Introduction to Contract Programming
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://rfc.zeromq.org/spec:42/C4/">
+        <img src="https://www.google.com/s2/favicons?domain=rfc.zeromq.org">
+        ZeroMQ RFC 42/C4 - Collective Code Construction Contract
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=7HECD3eLoVo">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Pieter Hintjens - How Conway&#39;s Law is eating your job?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.hillelwayne.com/post/box-diagrams/">
+        <img src="https://www.google.com/s2/favicons?domain=www.hillelwayne.com">
+        How is a Class like a Microservice?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.hillelwayne.com/post/the-best-se-paper/">
+        <img src="https://www.google.com/s2/favicons?domain=www.hillelwayne.com">
+        The best software engineering paper you haven&#39;t read
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=ApqI9XLRk4k">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Pieter Hintjens - ZMQ, tech, ideas, community, writing and life
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://datadriven.club/">
+        <img src="https://www.google.com/s2/favicons?domain=datadriven.club">
+        Data Driven Products Now!
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://boringtechnology.club/">
+        <img src="https://www.google.com/s2/favicons?domain=boringtechnology.club">
+        Choose Boring Technology
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://alexkudlick.com/blog/what-the-four-color-theorem-can-teach-us-about-writing-software/">
+        <img src="https://www.google.com/s2/favicons?domain=alexkudlick.com">
+        What the Four Color Theorem can Teach Us About Writing Software
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=36bKE_JsHZs">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Pieter Hintjens - Our decentralized future
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=N-lSE3DBerM">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Greg Young - Developers are strange creatures
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=GRr4xeMn1uU">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Greg Young - Stop Over-Engenering
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.destroyallsoftware.com/talks/ideology">
+        <img src="https://www.google.com/s2/favicons?domain=www.destroyallsoftware.com">
+        Ideology
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.confluent.io/blog/toward-functional-programming-analogy-microservices/">
+        <img src="https://www.google.com/s2/favicons?domain=www.confluent.io">
+        Toward a Functional Programming Analogy for Microservices
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.codeship.com/growing-tech-stack-say-no/">
+        <img src="https://www.google.com/s2/favicons?domain=blog.codeship.com">
+        Growing Your Tech Stack: When to Say No
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=lzXHMy4ewtM">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Idée Fixe - David Nolen
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=ROor6_NGIWU">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        The Language of the System - Rich Hickey
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2017/11/20/groups/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        How do groups work on Linux?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=VSdnJDO-xdg">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Clojure, Made Simple - Rich Hickey
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=E0igfLcilSk">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Safety-Critical Systems - Professor Martyn Thomas
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=VfRVz1iqgKU">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        How Can Software Be So Hard? - Professor Martyn Thomas
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html">
+        <img src="https://www.google.com/s2/favicons?domain=testing.googleblog.com">
+        Just Say No to More End-to-End Tests
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://bravenewgeek.com/software-is-about-storytelling/">
+        <img src="https://www.google.com/s2/favicons?domain=bravenewgeek.com">
+        Software Is About Storytelling
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://bravenewgeek.com/smart-endpoints-dumb-pipes/">
+        <img src="https://www.google.com/s2/favicons?domain=bravenewgeek.com">
+        Smart Endpoints, Dumb Pipes
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://bravenewgeek.com/you-cannot-have-exactly-once-delivery/">
+        <img src="https://www.google.com/s2/favicons?domain=bravenewgeek.com">
+        You Cannot Have Exactly-Once Delivery
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=aweV9FLTZkU">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Martin Fowler - Event Sourcing
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=LfOVyNQK5io">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Ashley Williams - A brief history and mishistory of modularity
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://programmingisterrible.com/post/162346490883/how-do-you-cut-a-monolith-in-half">
+        <img src="https://www.google.com/s2/favicons?domain=programmingisterrible.com">
+        How do you cut a monolith in half?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://increment.com/development/center-stage-best-practices-for-staging-environments/">
+        <img src="https://www.google.com/s2/favicons?domain=increment.com">
+        Best practices for staging environments
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.lispcast.com/clojure-and-types">
+        <img src="https://www.google.com/s2/favicons?domain=www.lispcast.com">
+        Clojure vs. The Static Typing World
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.fastly.com/blog/q-mindset-designing-reliability/">
+        <img src="https://www.google.com/s2/favicons?domain=www.fastly.com">
+        Designing for Reliability
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/unsplash-unfiltered/scaling-unsplash-with-a-small-team-fbdd55571906">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Scaling Unsplash with a small team
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://honeycomb.io/blog/2017/10/metrics-not-the-observability-droids-youre-looking-for/">
+        <img src="https://www.google.com/s2/favicons?domain=honeycomb.io">
+        Metrics: not the observability droids you&#39;re looking for
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@copyconstruct/monitoring-in-the-time-of-cloud-native-c87c7a5bfa3e">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Monitoring in the time of Cloud Native
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@copyconstruct/the-death-of-ops-is-greatly-exaggerated-ff3bd4a67f24">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Everyone is not Ops
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://docs.google.com/document/d/199PqyG3UsyXlwieHaqbGiWVa8eMWi8zzAn0YfcApr8Q">
+        <img src="https://www.google.com/s2/favicons?domain=docs.google.com">
+        My Philosophy on Alerting
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=6bBggO6KN_k">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        An Introduction to Raft by Diego Ongaro, creator of Raft
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=2V1FtfBDsLU">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Effective Programs - 10 Years of Clojure - Rich Hickey
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=pozC9rBvAIs">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        &#34;Managing Containers at Scale with CoreOS and Kubernetes&#34; by Kelsey Hightower
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://nickcraver.com/blog/2017/05/22/https-on-stack-overflow/">
+        <img src="https://www.google.com/s2/favicons?domain=nickcraver.com">
+        HTTPS on Stack Overflow
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://segment.com/blog/the-million-dollar-eng-problem/">
+        <img src="https://www.google.com/s2/favicons?domain=segment.com">
+        The Million Dollar Engineering Problem
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://gist.github.com/isaacs/62a2d1825d04437c6f08">
+        <img src="https://www.google.com/s2/favicons?domain=gist.github.com">
+        make tutorial
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://segment.com/blog/why-microservices/">
+        <img src="https://www.google.com/s2/favicons?domain=segment.com">
+        Why Microservices Work For Us
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://segment.com/blog/rebuilding-our-infrastructure/">
+        <img src="https://www.google.com/s2/favicons?domain=segment.com">
+        Rebuilding Our Infrastructure with Docker, ECS, and Terraform
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://segment.com/blog/where-is-our-package-manager-for-the-cloud/">
+        <img src="https://www.google.com/s2/favicons?domain=segment.com">
+        Where Is Our “Package Manager for the Cloud?”
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://eev.ee/blog/2015/09/12/dark-corners-of-unicode/">
+        <img src="https://www.google.com/s2/favicons?domain=eev.ee">
+        Dark corners of Unicode
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://opensource.com/article/17/8/testing-production">
+        <img src="https://www.google.com/s2/favicons?domain=opensource.com">
+        Testing in production
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://vimeo.com/108441214">
+        <img src="https://www.google.com/s2/favicons?domain=vimeo.com">
+        Greg Young - The art of destroying software
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://peter.bourgon.org/ok-log/">
+        <img src="https://www.google.com/s2/favicons?domain=peter.bourgon.org">
+        OK Log
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.tendigi.com/starbucks-should-really-make-their-apis-public-6b64a1c2e923">
+        <img src="https://www.google.com/s2/favicons?domain=blog.tendigi.com">
+        Starbucks should really make their APIs public.
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=gas2v1emubU">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Tyler McMullen - Load Balancing is Impossible
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://workplace.stackexchange.com/questions/93696/is-it-unethical-for-me-to-not-tell-my-employer-i-ve-automated-my-job">
+        <img src="https://www.google.com/s2/favicons?domain=workplace.stackexchange.com">
+        Is it unethical for me to not tell my employer I’ve automated my job?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.jessitron.com/2017/06/the-most-productive-circumstances-for.html">
+        <img src="https://www.google.com/s2/favicons?domain=blog.jessitron.com">
+        Hyperproductive development
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2017/06/18/operate-your-software/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        What can developers learn from being on call?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">
+        <img src="https://www.google.com/s2/favicons?domain=www.joelonsoftware.com">
+        The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://hintjens.com/blog:95">
+        <img src="https://www.google.com/s2/favicons?domain=hintjens.com">
+        Ten Rules for Open Source Success
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.destroyallsoftware.com/compendium/network-protocols?share_key=97d3ba4c24d21147">
+        <img src="https://www.google.com/s2/favicons?domain=www.destroyallsoftware.com">
+        Network protocols - For everyone who knows a programming language
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://thecodist.com/article/every-server-is-a-kind-of-honeypot">
+        <img src="https://www.google.com/s2/favicons?domain=thecodist.com">
+        Every Server Is A Kind Of Honeypot
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@mikeal/docs-docs-docs-1e06d17fa06f">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Docs, Docs, Docs!
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=X25xOhntr6s">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Elixir Should Take Over the World by Jessica Kerr
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://thecodist.com/article/lessons_from_a_lifetime_of_being_a_programmer">
+        <img src="https://www.google.com/s2/favicons?domain=thecodist.com">
+        Lessons From A Lifetime Of Being A Programmer
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=fhOHn9TClXY">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Joe Armstrong interviews Alan Kay
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://brandur.org/minimalism">
+        <img src="https://www.google.com/s2/favicons?domain=brandur.org">
+        In Pursuit of Production Minimalism
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://shiroyasha.io/coreutils-that-you-might-not-know.html">
+        <img src="https://www.google.com/s2/favicons?domain=shiroyasha.io">
+        Linux utils that you might not know
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://dev.to/bitario/surviving-in-open-source">
+        <img src="https://www.google.com/s2/favicons?domain=dev.to">
+        Surviving In Open-Source
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://rreverser.com/reducing-test-cases-for-javascript-tooling/">
+        <img src="https://www.google.com/s2/favicons?domain=rreverser.com">
+        Reducing test cases for JavaScript tooling
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://dev.to/andreasklinger/comments-explain-why-not-what-and-2-more-rules-on-writing-good-comments">
+        <img src="https://www.google.com/s2/favicons?domain=dev.to">
+        Good comments explain WHY, not WHAT, and 3 more rules on writing good comments
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back">
+        <img src="https://www.google.com/s2/favicons?domain=dave.cheney.net">
+        Understand Go pointers in less than 800 words or your money back
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://everydayrails.com/2017/01/02/git-command-line-log-search.html">
+        <img src="https://www.google.com/s2/favicons?domain=everydayrails.com">
+        Search the git log from the command line
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">
+        <img src="https://www.google.com/s2/favicons?domain=tbaggery.com">
+        A Note About Git Commit Messages
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://xph.us/2017/04/23/readability.html">
+        <img src="https://www.google.com/s2/favicons?domain=xph.us">
+        Readability Matters More Than Correctness
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2017/04/27/no-feigning-surprise/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        No feigning surprise
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=3wyd6J3yjcs">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        The Silver Bullet Syndrome by Hadi Hariri
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://gist.github.com/jboner/2841832">
+        <img src="https://www.google.com/s2/favicons?domain=gist.github.com">
+        Latency Numbers Every Programmer Should Know
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://codewords.recurse.com/issues/six/promoting-reliability-in-web-software-companies">
+        <img src="https://www.google.com/s2/favicons?domain=codewords.recurse.com">
+        Promoting reliability in web software companies
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://maryrosecook.com/blog/post/git-in-six-hundred-words">
+        <img src="https://www.google.com/s2/favicons?domain=maryrosecook.com">
+        Git in six hundred words
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://spin.atomicobject.com/2017/03/07/attitudes-maintainable-code/">
+        <img src="https://www.google.com/s2/favicons?domain=spin.atomicobject.com">
+        Three Attitudes that Lead to Maintainable Code
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://bost.ocks.org/mike/make/">
+        <img src="https://www.google.com/s2/favicons?domain=bost.ocks.org">
+        Why Use Make
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://danluu.com/file-consistency/">
+        <img src="https://www.google.com/s2/favicons?domain=danluu.com">
+        File crash consistency and filesystems are hard
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://lemire.me/blog/2017/02/28/how-many-floating-point-numbers-are-in-the-interval-01/">
+        <img src="https://www.google.com/s2/favicons?domain=lemire.me">
+        How many floating-point numbers are in the interval [0,1]?
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://reedbeta.com/blog/programmers-intro-to-unicode/">
+        <img src="https://www.google.com/s2/favicons?domain=reedbeta.com">
+        A Programmer’s Introduction to Unicode
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/mission-log/design-better-data-tables-430a30a00d8c">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Design Better Data Tables
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://hackernoon.com/usr-bin-time-not-the-command-you-think-you-know-34ac03e55cc3">
+        <img src="https://www.google.com/s2/favicons?domain=hackernoon.com">
+        /usr/bin/time: not the command you think you know
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://antirez.com/news/112">
+        <img src="https://www.google.com/s2/favicons?domain=antirez.com">
+        The mythical 10x programmer
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://danluu.com/wat/">
+        <img src="https://www.google.com/s2/favicons?domain=danluu.com">
+        Normalization of deviance in software: how broken practices become standard
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://peter.bourgon.org/a-case-for-microservices/">
+        <img src="https://www.google.com/s2/favicons?domain=peter.bourgon.org">
+        A case for microservices
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2016/11/10/a-few-drawings-about-linux/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        A few drawings about Linux
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://duartes.org/gustavo/blog/post/what-does-an-idle-cpu-do">
+        <img src="https://www.google.com/s2/favicons?domain=duartes.org">
+        What Does an Idle CPU Do?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.exceptionnotfound.net/fundamental-laws-of-software-development/">
+        <img src="https://www.google.com/s2/favicons?domain=www.exceptionnotfound.net">
+        15 Fundamental Laws of Software Development
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://writing.kemitchell.com/2016/09/21/MIT-License-Line-by-Line.html">
+        <img src="https://www.google.com/s2/favicons?domain=writing.kemitchell.com">
+        The MIT License, Line by Line
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2014/12/14/fun-with-threads/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        Diving into concurrency: trying out mutexes and atomics
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://12factor.net/">
+        <img src="https://www.google.com/s2/favicons?domain=12factor.net">
+        The Twelve-Factor App
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@bartobri/applying-the-linus-tarvolds-good-taste-coding-requirement-99749f37684a">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Applying the Linus Torvalds “Good Taste” Coding Requirement
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://peter.bourgon.org/blog/2016/02/07/logging-v-instrumentation.html">
+        <img src="https://www.google.com/s2/favicons?domain=peter.bourgon.org">
+        Logging v. instrumentation
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://code.facebook.com/posts/561187904071636">
+        <img src="https://www.google.com/s2/favicons?domain=code.facebook.com">
+        Segmenting and refining images with SharpMask
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Unix_philosophy">
+        <img src="https://www.google.com/s2/favicons?domain=en.wikipedia.org">
+        Unix philosophy
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://monkey.org/~marius/unix-tools-hints.html">
+        <img src="https://www.google.com/s2/favicons?domain=monkey.org">
+        Hints for writing Unix tools
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://catb.org/~esr/faqs/hacker-howto.html">
+        <img src="https://www.google.com/s2/favicons?domain=catb.org">
+        How To Become A Hacker
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.heydonworks.com/article/on-writing-less-damn-code">
+        <img src="https://www.google.com/s2/favicons?domain=www.heydonworks.com">
+        Writing Less Damn Code
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://circleci.com/blog/its-the-future">
+        <img src="https://www.google.com/s2/favicons?domain=circleci.com">
+        It&#39;s The Future
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jgthms.com/web-design-in-4-minutes/">
+        <img src="https://www.google.com/s2/favicons?domain=jgthms.com">
+        Web Design in 4 minutes
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.jon.gold/2016/05/robot-design-school/">
+        <img src="https://www.google.com/s2/favicons?domain=www.jon.gold">
+        Taking The Robots To Design School
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://joearms.github.io/published/2014-02-07-why-programming-is-difficult.html">
+        <img src="https://www.google.com/s2/favicons?domain=joearms.github.io">
+        Joe Armstrong - Erlang and other stuff
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2016/06/13/should-you-be-scared-of-signals/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        Should you be scared of Unix signals?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2014/03/23/recovering-files-using-slash-proc-and-other-useful-facts/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        Recovering files using /proc
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2014/04/20/debug-your-programs-like-theyre-closed-source/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        Debug your programs like they&#39;re closed source!
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@mbostock/what-makes-software-good-943557f8a488">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        What Makes Software Good?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://getdango.com/emoji-and-deep-learning.html">
+        <img src="https://www.google.com/s2/favicons?domain=getdango.com">
+        Teaching Robots to Feel: Emoji &amp; Deep Learning
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://acko.net/blog/how-to-fold-a-julia-fractal/">
+        <img src="https://www.google.com/s2/favicons?domain=acko.net">
+        How to Fold a Julia Fractal
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.dantup.com/2016/04/have-software-developers-given-up/">
+        <img src="https://www.google.com/s2/favicons?domain=blog.dantup.com">
+        Have Software Developers Given Up?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2016/03/23/io-matters/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        I/O matters.
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2015/11/22/how-i-got-better-at-debugging/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        How I got better at debugging
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://thecodist.com/article/all-i-need-to-know-to-be-a-better-programmer-i-learned-in-kindergarten">
+        <img src="https://www.google.com/s2/favicons?domain=thecodist.com">
+        All I Need To Know To Be A Better Programmer I Learned In Kindergarten
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://thecodist.com/article/programming_is_a_dead_end_job">
+        <img src="https://www.google.com/s2/favicons?domain=thecodist.com">
+        Programming Is a Dead End Job
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.lifehack.org/articles/communication/how-the-sunk-cost-fallacy-makes-you-act-stupid.html">
+        <img src="https://www.google.com/s2/favicons?domain=www.lifehack.org">
+        How the Sunk Cost Fallacy Makes You Act Stupid
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://thecodist.com/article/my-biggest-regret-as-a-programmer">
+        <img src="https://www.google.com/s2/favicons?domain=thecodist.com">
+        My Biggest Regret As A Programmer
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://mjg59.dreamwidth.org/40505.html">
+        <img src="https://www.google.com/s2/favicons?domain=mjg59.dreamwidth.org">
+        I stayed in a hotel with Android lightswitches and it was just as bad as you&#39;d imagine
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.boredpanda.com/inceptionism-neural-network-deep-dream-art/">
+        <img src="https://www.google.com/s2/favicons?domain=www.boredpanda.com">
+        Man Combines Random People’s Photos Using Neural Networks And The Results Are Amazing
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://danluu.com/everything-is-broken/">
+        <img src="https://www.google.com/s2/favicons?domain=danluu.com">
+        Everything is broken
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@felixge/the-worst-part-about-programming-cf45854a7814">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        The worst part about programming
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@beaugunderson/things-i-ve-stopped-saying-fa7dea0bf317">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Things I’ve Stopped Saying
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454">
+        <img src="https://www.google.com/s2/favicons?domain=stackoverflow.com">
+        You can&#39;t parse HTML with RegEx
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jvns.ca/blog/2015/11/21/why-you-should-understand-a-little-about-tcp/">
+        <img src="https://www.google.com/s2/favicons?domain=jvns.ca">
+        Why you should understand a little about TCP
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://practicaltypography.com/effluents-influence-affluence.html">
+        <img src="https://www.google.com/s2/favicons?domain=practicaltypography.com">
+        Effluents influence affluence : Butterick’s Practical Typography
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://helloanselm.com/2016/choose-your-own-https/">
+        <img src="https://www.google.com/s2/favicons?domain=helloanselm.com">
+        Why You Should Choose Your Own HTTPS.
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.jessfraz.com/post/docker-containers-on-the-desktop/">
+        <img src="https://www.google.com/s2/favicons?domain=blog.jessfraz.com">
+        Docker Containers on the Desktop
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/message/everything-is-broken-81e5f33a24e1">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Everything Is Broken
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html">
+        <img src="https://www.google.com/s2/favicons?domain=www.cs.utexas.edu">
+        The Humble Programmer
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://summitroute.com/blog/2015/12/24/instagram_bounty_case_study_for_defense/">
+        <img src="https://www.google.com/s2/favicons?domain=summitroute.com">
+        Instagram&#39;s Million Dollar Bug
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.marcozehe.de/2015/12/14/the-web-accessibility-basics/">
+        <img src="https://www.google.com/s2/favicons?domain=www.marcozehe.de">
+        The web accessibility basics
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://idlewords.com/talks/website_obesity.htm">
+        <img src="https://www.google.com/s2/favicons?domain=idlewords.com">
+        The Website Obesity Crisis
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.smashingmagazine.com/2015/06/02/the-making-of-in-pieces/">
+        <img src="https://www.google.com/s2/favicons?domain=www.smashingmagazine.com">
+        The Making Of &#39;In Pieces&#39;
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://staltz.com/unidirectional-user-interface-architectures.html">
+        <img src="https://www.google.com/s2/favicons?domain=staltz.com">
+        Unidirectional User Interface Architectures
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=EjCWdsrVcBM">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        &#39;Inside the Wolfram Language&#39; by Stephen Wolfram
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=lKXe3HUG2l4">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        &#39;The Mess We&#39;re In&#39; by Joe Armstrong
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=NdSD07U5uBs">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Alan Kay - Power of Simplicity
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@garywiz/five-things-old-programmers-need-to-remember-e78caf0b0973">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        Five Things Old Programmers Should Remember
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://danielmiessler.com/study/tr/">
+        <img src="https://www.google.com/s2/favicons?domain=danielmiessler.com">
+        A tr Primer
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.jcoglan.com/2014/06/16/graphical-thinking-optimisation-through-functional-programming/">
+        <img src="https://www.google.com/s2/favicons?domain=blog.jcoglan.com">
+        Graphical thinking - optimisation through functional programming
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://thomasbyttebier.be/blog/the-best-icon-is-a-text-label">
+        <img src="https://www.google.com/s2/favicons?domain=thomasbyttebier.be">
+        The best icon is a text label
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.catonmat.net/blog/bash-one-liners-explained-part-three/">
+        <img src="https://www.google.com/s2/favicons?domain=www.catonmat.net">
+        Bash One-Liners Explained - Redirections
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.infoq.com/presentations/Value-Values">
+        <img src="https://www.google.com/s2/favicons?domain=www.infoq.com">
+        The Value of Values - Rich Hickey
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim/1220118#1220118">
+        <img src="https://www.google.com/s2/favicons?domain=stackoverflow.com">
+        What is your most productive shortcut with Vim?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://firstround.com/review/the-story-behind-how-pocket-hit-20m-users-with-20-people/">
+        <img src="https://www.google.com/s2/favicons?domain=firstround.com">
+        The Story Behind How Pocket Hit 20M Users with 20 People
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://code.facebook.com/posts/745068642270222/fighting-spam-with-haskell/">
+        <img src="https://www.google.com/s2/favicons?domain=code.facebook.com">
+        Fighting spam with Haskell
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://idlewords.com/talks/web_design_first_100_years.htm">
+        <img src="https://www.google.com/s2/favicons?domain=idlewords.com">
+        Web Design : The First 100 Years
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.lukew.com/ff/entry.asp?1950">
+        <img src="https://www.google.com/s2/favicons?domain=www.lukew.com">
+        Dropdowns Should be the UI of Last Resort
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://rauchg.com/2015/pure-ui/">
+        <img src="https://www.google.com/s2/favicons?domain=rauchg.com">
+        Pure UI
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://jxnblk.com/react-icons/">
+        <img src="https://www.google.com/s2/favicons?domain=jxnblk.com">
+        Building SVG Icons with React
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@dan_abramov/youre-missing-the-point-of-react-a20e34a51e1a">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        You’re Missing the Point of React
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@dan_abramov/the-case-for-flux-379b7d1982c6">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        You Might Need Flux
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=4E3xfR6IBII">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Not Just Code Monkeys - Martin Fowler
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://users.ece.utexas.edu/~adnan/pike.html">
+        <img src="https://www.google.com/s2/favicons?domain=users.ece.utexas.edu">
+        Rob Pike&#39;s 5 Rules of Programming
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://sahandsaba.com/nine-anti-patterns-every-programmer-should-be-aware-of-with-examples.html">
+        <img src="https://www.google.com/s2/favicons?domain=sahandsaba.com">
+        9 Anti-Patterns Every Programmer Should Be Aware Of
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.kalzumeus.com/2010/03/20/running-a-software-business-on-5-hours-a-week/">
+        <img src="https://www.google.com/s2/favicons?domain=www.kalzumeus.com">
+        Running A Software Business On 5 Hours A Week
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.tomdalling.com/blog/software-design/fizzbuzz-in-too-much-detail/">
+        <img src="https://www.google.com/s2/favicons?domain=www.tomdalling.com">
+        FizzBuzz In Too Much Detail — Tom Dalling
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.vitavonni.de/blog/201503/2015031201-the-sad-state-of-sysadmin-in-the-age-of-containers.html">
+        <img src="https://www.google.com/s2/favicons?domain=www.vitavonni.de">
+        The sad state of sysadmin in the age of containers
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.theparisreview.org/blog/2014/09/05/the-beauty-of-code/">
+        <img src="https://www.google.com/s2/favicons?domain=www.theparisreview.org">
+        The Beauty of Code
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://en.wikipedia.org/wiki/Process_substitution">
+        <img src="https://www.google.com/s2/favicons?domain=en.wikipedia.org">
+        Process substitution
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://tom-lord.weebly.com/blog/reverse-engineering-regular-expressions">
+        <img src="https://www.google.com/s2/favicons?domain=tom-lord.weebly.com">
+        Reverse Engineering Regular Expressions
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://medium.com/@landongn/12-years-later-what-i-ve-learned-about-being-a-software-engineer-d6e334d6e8a3">
+        <img src="https://www.google.com/s2/favicons?domain=medium.com">
+        What I’ve learned so far about software development
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://rachelbythebay.com/w/2013/06/05/duck/">
+        <img src="https://www.google.com/s2/favicons?domain=rachelbythebay.com">
+        Project managers, ducks, and dogs marking territory
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://blog.salsitasoft.com/what-i-wish-i-knew-when-starting-out-as-a-software-developer-slow-the-fuck-down/">
+        <img src="https://www.google.com/s2/favicons?domain=blog.salsitasoft.com">
+        What I Wish I Knew When Starting Out as a Software Developer
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.kitchensoap.com/2012/10/25/on-being-a-senior-engineer/">
+        <img src="https://www.google.com/s2/favicons?domain=www.kitchensoap.com">
+        On Being A Senior Engineer
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://www.youtube.com/watch?v=ubaX1Smg6pY">
+        <img src="https://www.google.com/s2/favicons?domain=www.youtube.com">
+        Is it really &#39;Complex&#39;? Or did we just make it &#39;Complicated&#39;?
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://zachholman.com/talk/move-fast-break-nothing/">
+        <img src="https://www.google.com/s2/favicons?domain=zachholman.com">
+        Move fast &amp; break nothing
+      </a>
+    </li>
+  
+    <li>
+      <a href="http://blog.petersobot.com/pipes-and-filters">
+        <img src="https://www.google.com/s2/favicons?domain=blog.petersobot.com">
+        Pipes and Filters
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://vivin.net/2014/06/26/how-i-got-a-medal-for-writing-code/">
+        <img src="https://www.google.com/s2/favicons?domain=vivin.net">
+        How I got a medal from the Army for writing code
+      </a>
+    </li>
+  
+    <li>
+      <a href="https://steve-yegge.blogspot.com/2006/03/math-for-programmers.html">
+        <img src="https://www.google.com/s2/favicons?domain=steve-yegge.blogspot.com">
+        Math For Programmers
+      </a>
+    </li>
+  
+  </ul>
+
+</article>
+
+  <footer>
+  </footer>
+
+  <script>
+  </script>
+</body>
+</html>
+

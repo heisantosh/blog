@@ -4,20 +4,17 @@ title = '🍉 Delay Line Memory'
 theme = 'me'
 paginate = 10
 
-[author]
-    name = 'Santosh Heigrujam'
-    email = 'santosh.hei@gmail.com'
-
 [permalinks]
     post = '/blog/:year/:month/:day/:title/'
 
 [params]
-    description = 'On Life, Software & the Universe'
+    author = "Santosh Heigrujam"
+    description = 'On computer software systems'
     home = 'Blog'
 
     # Socials
     github = 'heisantosh'
-    twitter = 'heisantosh'
+    x = 'heisantosh'
     linkedin = 'santosh-heigrujam'
 
 pygmentsuseclasses = true
