@@ -1,8 +1,9 @@
 baseURL = 'https://heisantosh.github.io/'
 languageCode = 'en-us'
-title = '🍉 Delay Line Memory'
-theme = 'me'
-paginate = 10
+title = 'Delay Line Memory'
+theme = 'mu'
+[pagination]
+    pagerSize = 10
 
 [permalinks]
     post = '/blog/:year/:month/:day/:title/'
@@ -12,15 +13,24 @@ paginate = 10
     description = 'On computer software systems'
     home = 'Blog'
 
+    # Title symbol - displayed before site title (computer history themed)
+    # Set to enable. Options: λ (lambda) ⊕ (XOR) ¬ (NOT) ▮ (cursor) Δ (delta) ⬚ (register) ◊ (decision) » (shift)
+    # Use "random" for random rotation on each page load
+    # titleSymbol = 'λ'
+    # titleSymbol = 'random'
+
     # Socials
     github = 'heisantosh'
     x = 'heisantosh'
     linkedin = 'santosh-heigrujam'
 
-pygmentsuseclasses = true
-pygmentscodefences = true
-
 [markup]
-    [goldmark]
-        [renderer]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
             unsafe = true
+    [markup.highlight]
+        noClasses = false
+        codeFences = true
+        guessSyntax = true
+        lineNos = false
+        style = "monokai" # This won't matter much if noClasses is false, but good to have a fallback

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <p class="page-description">{{ . }}</p>
+  {{- end }}
+</header>
+
+<div class="projects-list">
+  {{ range .Site.Data.projects }}
+  <div class="project-item">
+    <div class="project-header">
+      <h2 class="project-title">
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+      </h2>
+      <span class="project-year">{{ .year }}</span>
+    </div>
+    <p class="project-description">{{ .description }}</p>
+    {{ with .tags }}
+    <div class="project-tags">
+      {{ range . }}
+      <span class="project-tag">#{{ . | lower }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

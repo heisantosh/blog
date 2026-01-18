@@ -1,0 +1,23 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <p>{{ . }}</p>
+  {{- end }}
+</header>
+
+<ul class="post-list">
+  {{- range .Pages }}
+  <li class="post-list-item">
+    <h2 class="post-list-title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+    {{ partial "post-meta.html" . }}
+    {{- with .Summary }}
+    <p class="post-summary">{{ . | plainify | truncate 150 }}</p>
+    {{- end }}
+  </li>
+  {{- end }}
+</ul>
+
+{{ end }}

@@ -1,0 +1,79 @@
+<header class="site-header">
+  <h1 class="site-title">
+    <a href="{{ .Site.BaseURL }}">{{ with .Site.Params.titleSymbol }}<span class="title-symbol" aria-hidden="true" data-mode="{{ . }}">{{ if eq . "random" }}›{{ else }}{{ . }}{{ end }}</span> {{ end }}{{ .Site.Title }}</a>
+  </h1>
+
+  <nav class="site-nav">
+    <a href="{{ "about/" | relURL }}">about</a>
+    <a href="{{ "projects/" | relURL }}">projects</a>
+
+    <!-- Theme Toggle Button (Lantern) -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <!-- Lantern ON (light mode) -->
+      <svg class="lamp-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Roof -->
+        <path d="M12 3l-7 4h14l-7-4z" />
+        <!-- Finial -->
+        <path d="M12 2v1" />
+        <!-- Cage/Glass -->
+        <path d="M5 7l2 11h10l2-11" />
+        <!-- Base -->
+        <path d="M12 18v4" />
+        <path d="M9 22h6" />
+        <!-- Light Source (Glow) -->
+        <circle cx="12" cy="13" r="3" fill="currentColor" stroke="none" opacity="0.8" />
+        <!-- Rays (Shining) -->
+        <path d="M12 10v-1" />
+        <path d="M12 16v1" />
+        <path d="M9 13h-1" />
+        <path d="M15 13h1" />
+        <path d="M10 11l-1-1" />
+        <path d="M14 11l1-1" />
+        <path d="M10 15l-1 1" />
+        <path d="M14 15l1 1" />
+      </svg>
+      <!-- Lantern OFF (dark mode) -->
+      <svg class="lamp-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Roof -->
+        <path d="M12 3l-7 4h14l-7-4z" />
+        <!-- Finial -->
+        <path d="M12 2v1" />
+        <!-- Cage/Glass -->
+        <path d="M5 7l2 11h10l2-11" />
+        <!-- Base -->
+        <path d="M12 18v4" />
+        <path d="M9 22h6" />
+        <!-- Light Source (Off) -->
+        <circle cx="12" cy="13" r="2" />
+      </svg>
+    </button>
+  </nav>
+</header>
+
+<script>
+  function toggleTheme() {
+    var html = document.documentElement;
+    var currentTheme = html.getAttribute('data-theme');
+    var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  }
+
+  // Random computer-themed title symbol (only when mode is "random")
+  // Symbols inspired by computing history:
+  //   λ  - Lambda calculus (Church, Turing)
+  //   ⊕  - XOR gate (logic circuits)
+  //   ¬  - NOT gate (boolean logic)
+  //   ▮  - Block cursor (terminals)
+  //   Δ  - Delta/change (state machines)
+  //   ⬚  - Empty register (memory)
+  //   ◊  - Decision (flowcharts)
+  //   »  - Bit shift (assembly)
+  (function() {
+    var symbol = document.querySelector('.title-symbol');
+    if (symbol && symbol.getAttribute('data-mode') === 'random') {
+      var symbols = ['λ', '⊕', '¬', '▮', 'Δ', '⬚', '◊', '»'];
+      symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    }
+  })();
+</script>

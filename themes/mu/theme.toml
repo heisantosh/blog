@@ -1,0 +1,13 @@
+# Theme metadata
+name = "mu"
+license = "MIT"
+licenselink = "https://github.com/heisantosh/blog/blob/main/LICENSE"
+description = "A minimal Hugo theme with light/dark mode support"
+homepage = "https://github.com/heisantosh/blog"
+tags = ["minimal", "dark-mode", "light-mode", "responsive", "blog"]
+features = ["light-dark-toggle", "responsive", "rss"]
+min_version = "0.112.0"
+
+[author]
+  name = "Santosh Heigrujam"
+  homepage = "https://heisantosh.github.io/"

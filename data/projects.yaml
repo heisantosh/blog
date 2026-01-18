@@ -1,0 +1,17 @@
+- name: "mu-theme"
+  description: "A minimal, privacy-focused Hugo theme with light/dark mode and Gruvbox syntax highlighting."
+  url: "https://github.com/heisantosh/blog"
+  tags: ["Hugo", "CSS", "Design"]
+  year: "2026"
+
+- name: "Go Context Guide"
+  description: "Interactive guide and visualization for understanding Go's context package."
+  url: "#"
+  tags: ["Go", "Visualization"]
+  year: "2025"
+
+- name: "CLI Dashboard"
+  description: "A terminal-based dashboard for monitoring system resources built with Rust."
+  url: "#"
+  tags: ["Rust", "TUI", "CLI"]
+  year: "2024"

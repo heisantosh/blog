@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{- with .Content }}
+<div class="site-intro">
+  {{ . }}
+</div>
+<hr>
+{{- end }}
+
+{{- $posts := where .Site.RegularPages "Section" "post" }}
+{{- $posts = where $posts ".Params.unlist" "!=" true }}
+
+<ul class="post-list">
+  {{- range $posts }}
+  <li class="post-list-item">
+    <h2 class="post-list-title">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+    {{ partial "post-meta.html" . }}
+    {{- with .Params.description }}
+    <p class="post-description">{{ . }}</p>
+    {{- end }}
+  </li>
+  {{- end }}
+</ul>
+
+{{- if eq (len $posts) 0 }}
+<p>No posts yet.</p>
+{{- end }}
+
+{{ end }}
