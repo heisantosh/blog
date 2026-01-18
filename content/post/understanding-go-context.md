@@ -6,6 +6,8 @@ description: "A deep dive into Go's context package for cancellation and timeout
 tags: ["go", "concurrency", "programming"]
 ---
 
+> AI generated to act as place holder for my blog post!
+
 The `context` package in Go is one of those features that seems simple at first but reveals its depth as you work with it more. It's become essential for writing robust, concurrent Go programs.
 
 ## What Problem Does Context Solve?

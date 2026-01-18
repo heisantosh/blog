@@ -6,6 +6,8 @@ description: "What makes the difference between good and bad abstractions."
 tags: ["software-design", "philosophy"]
 ---
 
+> AI generated to act as place holder for my blog post!
+
 Good abstractions are invisible. Bad abstractions are constant friction. After building and maintaining software for a while, I've developed some intuitions about what makes the difference.
 
 ## The Leaky Abstraction Problem

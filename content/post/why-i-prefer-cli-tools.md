@@ -6,6 +6,8 @@ description: "On composability, speed, and the Unix philosophy."
 tags: ["cli", "unix", "tools"]
 ---
 
+> AI generated to act as place holder for my blog post!
+
 After years of using various development tools, I've found myself gravitating more and more toward command-line interfaces. Here's why.
 
 ## Composability
