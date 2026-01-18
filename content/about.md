@@ -4,15 +4,11 @@ title: "about"
 
 My name is **Santosh Heigrujam**.
 
-I am a software engineer with a deep passion for understanding how things work under the hood. My professional journey revolves around designing and building robust software systems. I find joy in the details—whether it's optimizing a database query, designing a clean API, or debugging a race condition.
+I am a software engineer by profession. This website is a place to share my thoughts and experiences with computer systems.
 
-This space serves as a collection of my experiences and thoughts. Here, I write about:
+Currently, I'm working on cloud infrastructure tooling at Microsoft Azure. In one of my previous roles, I work on the backend powering `npm` at GitHub, and improving developer experiences on the website.
 
-*   **Software Engineering Systems:** Architecting scalable solutions and the trade-offs involved in system design.
-*   **Engineering Practices:** The tools, workflows, and philosophies that make development effective and enjoyable.
-*   **Experiences:** Lessons learned from the trenches of building and maintaining production software.
-
-I believe in continuous learning and the value of sharing knowledge. I hope you find something useful here.
+Recently, I have been practing using Rust in distributed systems.
 
 You can find me on:
 
