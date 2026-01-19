@@ -131,18 +131,27 @@ pre code { background: none; padding: 0; font-size: inherit; }
   margin-bottom: 2rem;
 }
 .site-title { font-size: 1.35rem; font-weight: var(--font-weight-header); margin: 0; text-transform: lowercase; }
-.site-title a { color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+.site-title a { color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; position: relative; }
 .site-title a:hover { color: var(--accent); }
-/* .title-symbol { color: var(--accent); margin-right: 0.15em; font-weight: var(--font-weight-header); } */
 
 .delay-line-icon {
   width: 24px;
   height: 24px;
   color: var(--accent); /* Default to accent color */
   transition: color 0.15s ease;
+  flex-shrink: 0;
 }
 .site-title a:hover .delay-line-icon {
   color: var(--accent-hover);
+}
+
+/* On wider screens, hang the icon to the left so text aligns with content */
+@media (min-width: 1000px) {
+  .delay-line-icon {
+    position: absolute;
+    right: 100%;
+    margin-right: 0.75rem;
+  }
 }
 
 .site-nav { display: flex; align-items: center; gap: 1.25rem; text-transform: lowercase; }
