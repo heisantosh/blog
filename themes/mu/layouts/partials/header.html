@@ -1,6 +1,17 @@
 <header class="site-header">
   <h1 class="site-title">
-    <a href="{{ .Site.BaseURL }}">{{ with .Site.Params.titleSymbol }}<span class="title-symbol" aria-hidden="true" data-mode="{{ . }}">{{ if eq . "random" }}›{{ else }}{{ . }}{{ end }}</span> {{ end }}{{ .Site.Title }}</a>
+    <a href="{{ .Site.BaseURL }}" class="logo-link">
+      <svg class="delay-line-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <!-- Tube Body -->
+        <rect x="3" y="6" width="18" height="12" rx="2" />
+        <!-- Digital Pulse Signal -->
+        <path d="M7 12 h 2 v -3 h 3 v 6 h 3 v -3 h 2" />
+        <!-- Connectors -->
+        <path d="M1 12 h 2" />
+        <path d="M21 12 h 2" />
+      </svg>
+      {{ .Site.Title }}
+    </a>
   </h1>
 
   <nav class="site-nav">
