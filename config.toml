@@ -13,9 +13,6 @@ theme = 'mu'
     description = 'On computer software systems'
     home = 'Blog'
 
-    # Logo Style - Options: 'isometric', 'bank', 'perspective'
-    logoStyle = 'bank'
-
     # Title symbol - displayed before site title (computer history themed)
     # Set to enable. Options: λ (lambda) ⊕ (XOR) ¬ (NOT) ▮ (cursor) Δ (delta) ⬚ (register) ◊ (decision) » (shift)
     # Use "random" for random rotation on each page load

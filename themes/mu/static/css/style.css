@@ -130,83 +130,9 @@ pre code { background: none; padding: 0; font-size: inherit; }
   border-bottom: 1px solid var(--border);
   margin-bottom: 2rem;
 }
-.site-title { margin: 0; line-height: 1; }
-/* Logo Styles */
-.logo-link {
-  color: var(--text);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-/* Isometric (Default) & Bank: Icon Left */
-.logo-link.isometric, .logo-link.bank {
-  flex-direction: row;
-}
-
-/* Perspective: Icon Bottom */
-.logo-link.perspective {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-}
-
-.site-logo {
-  height: 40px;
-  width: auto;
-  display: block;
-  color: var(--accent); /* Default SVG color */
-}
-
-/* Animations & Specifics */
-.logo-isometric .iso-pulse {
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-.logo-link:hover .iso-pulse {
-  opacity: 1;
-  animation: isoFlow 1.5s linear infinite;
-}
-
-@keyframes isoFlow {
-  0% { stroke-dashoffset: 6; }
-  100% { stroke-dashoffset: 0; }
-}
-
-.logo-bank {
-  height: 34px;
-}
-.logo-link:hover .logo-bank rect {
-  fill: var(--text); /* Invert or shift color on hover */
-  transition: fill 0.2s;
-}
-
-.logo-perspective {
-  width: 100%;
-  max-width: 240px;
-  height: 20px;
-  margin-top: -4px;
-}
-.logo-link:hover .persp-pulse {
-  animation: perspFlow 1s linear infinite;
-}
-
-@keyframes perspFlow {
-  from { stroke-dashoffset: 210; }
-  to { stroke-dashoffset: 10; }
-}
-
-.logo-text {
-  font-size: 1.35rem;
-  font-weight: var(--font-weight-header);
-  text-transform: lowercase;
-  color: var(--text);
-}
-.logo-link:hover .logo-text {
-  color: var(--accent); /* Text lights up on hover */
-}
-
+.site-title { font-size: 1.35rem; font-weight: var(--font-weight-header); margin: 0; text-transform: lowercase; }
+.site-title a { color: var(--text); text-decoration: none; }
+.site-title a:hover { color: var(--accent); }
 .title-symbol { color: var(--accent); margin-right: 0.15em; font-weight: var(--font-weight-header); }
 
 .site-nav { display: flex; align-items: center; gap: 1.25rem; text-transform: lowercase; }
