@@ -2,14 +2,26 @@
   <h1 class="site-title">
     <a href="{{ .Site.BaseURL }}" class="logo-link">
       <div class="logo-text">{{ .Site.Title }}</div>
-      <svg class="delay-line-icon" viewBox="0 0 160 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <!-- Tube Outline -->
-        <rect x="0.5" y="0.5" width="159" height="13" rx="4" stroke="currentColor" stroke-opacity="0.2" stroke-width="1"/>
-        <!-- Signal Trace: Pulse train -->
-        <path d="M5 7 H 30 V 4 H 36 V 7 H 50 V 10 H 56 V 7 H 90 V 4 H 96 V 7 H 110 V 10 H 116 V 7 H 155" stroke="currentColor" stroke-width="1.5" class="signal-trace"/>
-        <!-- Transducers (Piezo crystals) at ends -->
-        <rect x="2" y="3" width="3" height="8" fill="currentColor" class="transducer"/>
-        <rect x="155" y="3" width="3" height="8" fill="currentColor" class="transducer"/>
+      <svg class="delay-line-icon" viewBox="0 0 200 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Input End Cap (Transducer Mount) -->
+        <rect x="0.5" y="0.5" width="23" height="23" rx="2" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+        <circle cx="12" cy="12" r="3" fill="currentColor"/>
+
+        <!-- Output End Cap (Transducer Mount) -->
+        <rect x="176.5" y="0.5" width="23" height="23" rx="2" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="188" y1="5" x2="188" y2="19" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+        <circle cx="188" cy="12" r="3" fill="currentColor"/>
+
+        <!-- The Tube -->
+        <path d="M24 6 H 176 V 18 H 24 V 6 Z" stroke="currentColor" stroke-width="1.5" />
+        
+        <!-- Internal Details (Shading/Reflection) -->
+        <path d="M28 9 H 172" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.3"/>
+        <path d="M28 15 H 172" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.3"/>
+
+        <!-- Signal Trace (Inside Tube) -->
+        <path d="M30 12 H 40 L 45 8 L 50 16 L 55 12 H 70 L 75 8 L 80 16 L 85 12 H 100 L 105 8 L 110 16 L 115 12 H 130 L 135 8 L 140 16 L 145 12 H 170" stroke="currentColor" stroke-width="1.5" class="signal-trace"/>
       </svg>
     </a>
   </h1>
