@@ -130,9 +130,42 @@ pre code { background: none; padding: 0; font-size: inherit; }
   border-bottom: 1px solid var(--border);
   margin-bottom: 2rem;
 }
-.site-title { font-size: 1.35rem; font-weight: var(--font-weight-header); margin: 0; text-transform: lowercase; }
-.site-title a { color: var(--text); text-decoration: none; }
-.site-title a:hover { color: var(--accent); }
+.site-title { margin: 0; line-height: 1; }
+.logo-link {
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.logo-link:hover { color: var(--text); } /* Text color stays, SVG animates */
+.logo-link:hover .signal-trace { stroke: var(--accent); }
+.logo-link:hover .transducer { fill: var(--accent); }
+
+.logo-text {
+  font-size: 1.35rem;
+  font-weight: var(--font-weight-header);
+  text-transform: lowercase;
+}
+
+.delay-line-icon {
+  height: 14px;
+  width: 160px; /* Fixed width to match visual weight of text */
+  display: block;
+  opacity: 0.8;
+}
+
+.signal-trace {
+  stroke: var(--text-secondary);
+  transition: stroke 0.2s ease;
+}
+
+.transducer {
+  fill: var(--text-secondary);
+  transition: fill 0.2s ease;
+}
+
 .title-symbol { color: var(--accent); margin-right: 0.15em; font-weight: var(--font-weight-header); }
 
 .site-nav { display: flex; align-items: center; gap: 1.25rem; text-transform: lowercase; }

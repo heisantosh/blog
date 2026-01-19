@@ -1,6 +1,17 @@
 <header class="site-header">
   <h1 class="site-title">
-    <a href="{{ .Site.BaseURL }}">{{ with .Site.Params.titleSymbol }}<span class="title-symbol" aria-hidden="true" data-mode="{{ . }}">{{ if eq . "random" }}›{{ else }}{{ . }}{{ end }}</span> {{ end }}{{ .Site.Title }}</a>
+    <a href="{{ .Site.BaseURL }}" class="logo-link">
+      <div class="logo-text">{{ .Site.Title }}</div>
+      <svg class="delay-line-icon" viewBox="0 0 160 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- Tube Outline -->
+        <rect x="0.5" y="0.5" width="159" height="13" rx="4" stroke="currentColor" stroke-opacity="0.2" stroke-width="1"/>
+        <!-- Signal Trace: Pulse train -->
+        <path d="M5 7 H 30 V 4 H 36 V 7 H 50 V 10 H 56 V 7 H 90 V 4 H 96 V 7 H 110 V 10 H 116 V 7 H 155" stroke="currentColor" stroke-width="1.5" class="signal-trace"/>
+        <!-- Transducers (Piezo crystals) at ends -->
+        <rect x="2" y="3" width="3" height="8" fill="currentColor" class="transducer"/>
+        <rect x="155" y="3" width="3" height="8" fill="currentColor" class="transducer"/>
+      </svg>
+    </a>
   </h1>
 
   <nav class="site-nav">
