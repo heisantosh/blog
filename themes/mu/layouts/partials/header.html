@@ -1,11 +1,6 @@
 <header class="site-header">
   <h1 class="site-title">
-    <a href="{{ .Site.BaseURL }}" class="logo-link">
-      {{ with .Site.Params.titleSymbol }}<span class="title-symbol" aria-hidden="true" data-mode="{{ . }}">{{ if eq . "random" }}›{{ else }}{{ . }}{{ end }}</span> {{ end }}
-      <svg class="site-logo" viewBox="0 0 280 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="{{ .Site.Title }}">
-        <text x="0" y="26" font-family="'Crimson Pro', serif" font-weight="800" font-size="30" letter-spacing="-0.5" fill="currentColor">Delay Line Memory</text>
-      </svg>
-    </a>
+    <a href="{{ .Site.BaseURL }}">{{ with .Site.Params.titleSymbol }}<span class="title-symbol" aria-hidden="true" data-mode="{{ . }}">{{ if eq . "random" }}›{{ else }}{{ . }}{{ end }}</span> {{ end }}{{ .Site.Title }}</a>
   </h1>
 
   <nav class="site-nav">
