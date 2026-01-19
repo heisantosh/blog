@@ -14,7 +14,7 @@ theme = 'mu'
     home = 'Blog'
 
     # Logo Style - Options: 'isometric', 'bank', 'perspective'
-    logoStyle = 'isometric'
+    logoStyle = 'bank'
 
     # Title symbol - displayed before site title (computer history themed)
     # Set to enable. Options: λ (lambda) ⊕ (XOR) ¬ (NOT) ▮ (cursor) Δ (delta) ⬚ (register) ◊ (decision) » (shift)
