@@ -1,6 +1,12 @@
 <header class="site-header">
   <h1 class="site-title">
-    <a href="{{ .Site.BaseURL }}">{{ with .Site.Params.titleSymbol }}<span class="title-symbol" aria-hidden="true" data-mode="{{ . }}">{{ if eq . "random" }}›{{ else }}{{ . }}{{ end }}</span> {{ end }}{{ .Site.Title }}</a>
+    <a href="{{ .Site.BaseURL }}" class="logo-link">
+      {{ with .Site.Params.titleSymbol }}<span class="title-symbol" aria-hidden="true" data-mode="{{ . }}">{{ if eq . "random" }}›{{ else }}{{ . }}{{ end }}</span> {{ end }}
+      <svg class="site-logo" viewBox="0 0 220 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="{{ .Site.Title }}">
+        <text x="0" y="24" class="logo-text" font-family="'Crimson Pro', serif" font-weight="600" font-size="26" letter-spacing="-0.5">delay line memory</text>
+        <path class="logo-pulse" d="M0 32 H 155 V 25 H 163 V 32 H 171 V 25 H 179 V 32 H 220" stroke-width="1.5" />
+      </svg>
+    </a>
   </h1>
 
   <nav class="site-nav">
