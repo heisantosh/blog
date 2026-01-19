@@ -130,10 +130,16 @@ pre code { background: none; padding: 0; font-size: inherit; }
   border-bottom: 1px solid var(--border);
   margin-bottom: 2rem;
 }
-.site-title { font-size: 1.35rem; font-weight: var(--font-weight-header); margin: 0; text-transform: lowercase; }
-.site-title a { color: var(--text); text-decoration: none; }
+.site-title { margin: 0; line-height: 1; display: flex; align-items: center; }
+.site-title a { color: var(--text); text-decoration: none; display: flex; align-items: center; }
 .site-title a:hover { color: var(--accent); }
-.title-symbol { color: var(--accent); margin-right: 0.15em; font-weight: var(--font-weight-header); }
+.title-symbol { color: var(--accent); margin-right: 0.5rem; font-weight: var(--font-weight-header); font-size: 1.5rem; }
+
+.site-logo {
+  height: 34px;
+  width: auto;
+  display: block;
+}
 
 .site-nav { display: flex; align-items: center; gap: 1.25rem; text-transform: lowercase; }
 .site-nav a { color: var(--text-secondary); font-size: 0.95rem; }
