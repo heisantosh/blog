@@ -2,7 +2,7 @@
 title: "about"
 ---
 
-My name is **Santosh Heigrujam**.
+Hi, I'm **Santosh Heigrujam**.
 
 Currently, I'm working on cloud infrastructure tooling at Microsoft Azure. In one of my previous roles, I work on the backend powering `npm` at GitHub, and improving developer experiences on the website.
 
@@ -12,4 +12,4 @@ You can find me on:
 
 *   [GitHub](https://github.com/heisantosh)
 *   [LinkedIn](https://linkedin.com/in/santosh-heigrujam)
-*   [X (Twitter)](https://x.com/heisantosh)
+*   [santosh.hei@gmail.com](santosh.hei@gmail.com)
